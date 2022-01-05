@@ -51,7 +51,7 @@
 		"install_vg": "true",
 
 		"sectors": "ACC_W ACC_E TMA ACC_NUC ACC_NAM",
-		"rw": "RW08L RW26L RW08R RW26R"
+		"runways": "RW08 RW26"
 	},
 
 	"DBSYNC": {
