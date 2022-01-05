@@ -534,10 +534,11 @@ Function Main(){
 			Wait-Process -Timeout 1800 -Id $pid_setup *>$null
 		}
 
-		if( Test-Path -Path "$($Data.TMP)\DISK1\setup.log" ){
-			$Result = (Get-Content "$($Data.TMP)\DISK1\setup.log")[1].Split("=")[1]
-			Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "OracleXE database installation completion code: $Result " -cr
-			if( $Result -eq 0 ){
+		Write-Mill "Waiting for completion of installation of Oracle DB" "Setup.exe"
+#		if( Test-Path -Path "$($Data.TMP)\DISK1\setup.log" ){
+#			$Result = (Get-Content "$($Data.TMP)\DISK1\setup.log")[1].Split("=")[1]
+#			Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "OracleXE database installation completion code: $Result " -cr
+#			if( $Result -eq 0 ){
 				Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Install Oracle XE database successful!" -cr
 				$pORACLE = "C:\oraclexe\app\oracle\product\11.2.0\server\network\ADMIN"
 				Set-Content -Path $pORACLE\listener.ora -Value ((Get-Content $pORACLE\listener.ora) -Replace "HOST.*", "HOST = BOI-$BLOCK)(PORT = 1521))")
@@ -564,7 +565,6 @@ Function Main(){
 
 					Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Session configDB started... "
 					Push-Location
-					Set-Location "$($Data.PATH_PELENG)\configDB"
 					.\config_bd.ps1 $sectors $runways
 					Pop-Location
 					Remove-Item -Recurse -Path "$($Data.PATH_PELENG)\confDB" -Force *>$null
@@ -574,8 +574,8 @@ Function Main(){
 					Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Unpacking error" -cr
 				}
 
-			} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Install Oracle XE database unsuccessful!" -cr }
-		} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "file setup.log not found!" -cr }
+#			} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Install Oracle XE database unsuccessful!" -cr }
+#		} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "file setup.log not found!" -cr }
 	}
 
 	if( $FileLog -and !$Force ){
@@ -584,8 +584,6 @@ Function Main(){
 	}
 
 	.\make_scripts.ps1
-
-	Write-Mill "Waiting for completion of installation of Oracle DB" "msiexec"
 
 	Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "=============================================================================" -cr
 	Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "=                             SESSION FINISHED                              =" -cr
