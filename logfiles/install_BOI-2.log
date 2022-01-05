@@ -1,0 +1,63 @@
+
+
+2022.01.05 - 01:17:38.191 [ INFO ] - < add_user.ps1 > : UAC off
+2022.01.05 - 01:17:50.659 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.05 - 01:17:50.691 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.05 - 01:17:50.691 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+2022.01.05 - 01:18:14.34 [ DEBUG LVL 2 ] - < Main > : Force=False, Verbose=, GUI=False, DEBUG=2;
+2022.01.05 - 01:18:14.50 [ DEBUG LVL 2 ] - < Main > : FileConfig=Z:\setup\Installer\Run-Installer.json;
+2022.01.05 - 01:18:14.50 [ DEBUG LVL 2 ] - < Main > : FileLog=C:\ProgramData\Peleng\logfiles\install.log;
+2022.01.05 - 01:18:14.66 [ INFO ] - < Main > : Copy Microsoft PowerShell profile... [ OK ]
+2022.01.05 - 01:18:14.112 [ INFO ] - < Main > : =============================================================================
+2022.01.05 - 01:18:14.128 [ INFO ] - < Main > : =                           NEW SESSION STARTED                             =
+2022.01.05 - 01:18:14.128 [ INFO ] - < Main > : =============================================================================
+2022.01.05 - 01:18:14.144 [ DEBUG LVL 2 ] - < Main > : You Locale: 00000419;
+2022.01.05 - 01:18:16.800 [ DEBUG LVL 2 ] - < question.ps1 > : ID=2, BLOCK=2, DEVICE=MASTER;
+2022.01.05 - 01:18:16.800 [ DEBUG LVL 2 ] - < Main > : ID=2, BLOCK=2, DEVICE=MASTER;
+2022.01.05 - 01:18:16.831 [ INFO ] - < Main > : Removing stitched shortcuts
+2022.01.05 - 01:18:17.331 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 4086 22... [ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ]
+2022.01.05 - 01:18:36.222 [ DEBUG LVL 2 ] - < Main > : subNet=192.168, stepNET=10;
+2022.01.05 - 01:18:36.941 [ DEBUG LVL 2 ] - < Main > : base IP address selected: 170;
+2022.01.05 - 01:18:37.800 [ DEBUG LVL 2 ] - < Set-PathPeleng > : PATH_PELENG=c:\Program Files (x86)\peleng\master;
+2022.01.05 - 01:18:37.862 [ INFO ] - < Rename-Lan_Old > : Rename network connections and sets the IP address... [ OK ][ OK ]
+2022.01.05 - 01:18:40.534 [ DEBUG LVL 2 ] - < Set-AsRun > : Selected run as programm;
+2022.01.05 - 01:18:40.550 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 1521... [ OK ][ OK ][ OK ][ OK ]
+2022.01.05 - 01:18:42.144 [ INFO ] - < install_master.ps1 > : Install soft environment
+2022.01.05 - 01:18:42.769 [ INFO ] - < Install-Soft > : Install OracleXE112_Win_x86... [ OK ][ OK ]
+2022.01.05 - 01:18:44.347 [ INFO ] - < install_master.ps1 > : Run install OracleXE Database in parallel process
+2022.01.05 - 01:18:44.597 [ INFO ] - < Install-Soft > : Install Base... [ OK ][ OK ]
+2022.01.05 - 01:18:49.691 [ DEBUG LVL 2 ] - < install_master.ps1 > : Version=1697;
+2022.01.05 - 01:18:49.691 [ INFO ] - < Install-Soft > : Install Release.1697... [ OK ][ OK ]
+2022.01.05 - 01:19:02.972 [ INFO ] - < Install-Soft > : Install Sound... 2022.01.05 - 01:19:06.878 [ DEBUG LVL 2 ] - < install_master.ps1 > : FLAG_HOTR=False;
+2022.01.05 - 01:19:07.894 [ INFO ] - < Main > : Copy SupervisorServer lib... [ OK ]
+2022.01.05 - 01:19:08.3 [ INFO ] - < Main > : Copy SupervisorServer bin... [ OK ][ OK ][ OK ]
+2022.01.05 - 01:19:08.112 [ INFO ] - < Main > : Copy PS Modules... [ OK ][ OK ][ OK ]
+2022.01.05 - 01:19:08.175 [ DEBUG LVL 2 ] - < Main > : MASTER Path: c:\Program Files (x86)\peleng\master\MASTER.exe;
+2022.01.05 - 01:19:08.191 [ DEBUG LVL 2 ] - < Main > : Active_Group: MASTER;
+2022.01.05 - 01:19:08.206 [ DEBUG LVL 2 ] - < Main > : VGrabber Path: C:\Program Files\Peleng\VGrabber\vgrabber.exe;
+2022.01.05 - 01:19:08.222 [ DEBUG LVL 2 ] - < Main > : DBSync Path: DbSync.exe;
+2022.01.05 - 01:19:08.253 [ INFO ] - < Main > : Power Setup... [ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ]
+2022.01.05 - 01:19:09.112 [ INFO ] - < Main > : Setting timeout OS to 3 sec... [ OK ]
+2022.01.05 - 01:19:11.175 [ INFO ] - < Main > : Time synchronization... [ DONE ]
+2022.01.05 - 01:19:11.269 [ INFO ] - < Main > : Disable autorun... [ DONE ]
+2022.01.05 - 01:19:11.284 [ INFO ] - < Main > : Services stop... [ OK ][ OK ]
+2022.01.05 - 01:19:11.847 [ INFO ] - < Main > : Services start... [ OK ]
+2022.01.05 - 01:19:12.222 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 123... [ OK ][ OK ][ OK ][ OK ]
+2022.01.05 - 01:19:16.253 [ INFO ] - < Main > : Setting LAN and RDP... [ DONE ]
+2022.01.05 - 01:19:16.644 [ INFO ] - < Main > : Sound off... [ DONE ]
+2022.01.05 - 01:19:16.659 [ INFO ] - < Main > : Disable auto reboot at crash... [ DONE ]
+2022.01.05 - 01:19:16.675 [ INFO ] - < Main > : UTC setting... [ OK ]
+2022.01.05 - 01:19:16.737 [ INFO ] - < Main > : Icons on Desktop... [ DONE ]
+2022.01.05 - 01:19:16.769 [ INFO ] - < Main > : Icons in Taskbar and StartMenu... [ DONE ]
+2022.01.05 - 01:19:16.800 [ INFO ] - < Main > : Layout... [ DONE ]
+2022.01.05 - 01:19:16.816 [ INFO ] - < Main > : EnableAutoTray... [ DONE ]
+2022.01.05 - 01:19:16.831 [ INFO ] - < Main > : OFF Visual effects... [ DONE ]
+2022.01.05 - 01:19:16.862 [ INFO ] - < Main > : ScheduledDefrag off... [ OK ]
+2022.01.05 - 01:19:17.191 [ INFO ] - < Main > : MP Scheduled Scan off... [ OK ]
+2022.01.05 - 01:19:17.441 [ INFO ] - < Main > : Uninstall: InboxGames, MediaCenter, OpticalMediaDisc, WindowsGadgetPlatform, TabletPCOC... [ . ][ . ][ . ][ . ][ . ][ DONE ]
+2022.01.05 - 01:19:17.706 [ INFO ] - < Main > : Run control panel to disable Security center messages
+2022.01.05 - 01:19:17.753 [ INFO ] - < Main > : Run Group politics to disable access to mass storage devices
+2022.01.05 - 01:19:17.862 [ WARNING ] - < Main > : file setup.log not found!
+2022.01.05 - 01:30:15.691 [ INFO ] - < Main > : =============================================================================
+2022.01.05 - 01:30:15.706 [ INFO ] - < Main > : =                             SESSION FINISHED                              =
+2022.01.05 - 01:30:15.706 [ INFO ] - < Main > : =============================================================================

@@ -1,0 +1,89 @@
+
+
+2022.01.03 - 13:32:58.915 [ INFO ] - < add_user.ps1 > : UAC off
+2022.01.03 - 13:33:04.52 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.03 - 13:33:04.67 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.03 - 13:33:04.81 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+
+
+2022.01.03 - 13:34:12.218 [ WARNING ] - < add_user.ps1 > : UAC allready off
+2022.01.03 - 13:34:14.748 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.03 - 13:34:14.765 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.03 - 13:34:14.765 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+
+
+2022.01.03 - 13:36:13.19 [ WARNING ] - < add_user.ps1 > : UAC allready off
+2022.01.03 - 13:36:15.404 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.03 - 13:36:15.423 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.03 - 13:36:15.443 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+
+
+2022.01.03 - 13:36:55.775 [ WARNING ] - < add_user.ps1 > : UAC allready off
+2022.01.03 - 13:36:57.661 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.03 - 13:36:57.674 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.03 - 13:36:57.674 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+
+
+2022.01.03 - 13:39:55.514 [ WARNING ] - < add_user.ps1 > : UAC allready off
+2022.01.03 - 13:39:58.127 [ INFO ] - < add_user.ps1 > : Configure autologon started
+2022.01.03 - 13:39:58.144 [ WARNING ] - < Set-Pass > : user < User > already exists
+2022.01.03 - 13:39:58.144 [ INFO ] - < Set-Pass > : Setting password for users User: 1... [ OK ]
+2022.01.03 - 13:40:53.419 [ DEBUG LVL 2 ] - < Main > : Force=False, Verbose=, GUI=False, DEBUG=2;
+2022.01.03 - 13:40:53.435 [ DEBUG LVL 2 ] - < Main > : FileConfig=Z:\setup\Installer\Run-Installer.json;
+2022.01.03 - 13:40:53.435 [ DEBUG LVL 2 ] - < Main > : FileLog=C:\ProgramData\Peleng\logfiles\install.log;
+2022.01.03 - 13:40:53.435 [ INFO ] - < Main > : Copy Microsoft PowerShell profile... [ OK ]
+2022.01.03 - 13:40:53.466 [ INFO ] - < Main > : =============================================================================
+2022.01.03 - 13:40:53.481 [ INFO ] - < Main > : =                           NEW SESSION STARTED                             =
+2022.01.03 - 13:40:53.481 [ INFO ] - < Main > : =============================================================================
+2022.01.03 - 13:40:53.497 [ DEBUG LVL 2 ] - < Main > : You Locale: 00000419;
+2022.01.03 - 13:41:00.28 [ DEBUG LVL 2 ] - < question.ps1 > : ID=2, BLOCK=3, DEVICE=MASTER;
+2022.01.03 - 13:41:00.44 [ DEBUG LVL 2 ] - < Main > : ID=2, BLOCK=3, DEVICE=MASTER;
+2022.01.03 - 13:41:00.75 [ INFO ] - < Main > : Removing stitched shortcuts
+2022.01.03 - 13:41:00.497 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 4086 22... [ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:09.277 [ DEBUG LVL 2 ] - < Main > : subNet=192.168, stepNET=10;
+2022.01.03 - 13:41:10.463 [ DEBUG LVL 2 ] - < Main > : base IP address selected: 170;
+2022.01.03 - 13:41:12.766 [ DEBUG LVL 2 ] - < Set-PathPeleng > : PATH_PELENG=c:\Program Files (x86)\peleng\master;
+2022.01.03 - 13:41:12.835 [ INFO ] - < Rename-Lan_Old > : Rename network connections and sets the IP address... [ OK ][ OK ]
+2022.01.03 - 13:41:16.490 [ DEBUG LVL 2 ] - < Set-AsRun > : Selected run as programm;
+2022.01.03 - 13:41:16.490 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 1521... [ OK ][ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:18.842 [ INFO ] - < install_master.ps1 > : Install soft environment
+2022.01.03 - 13:41:19.151 [ INFO ] - < Install-Soft > : Install OracleXE112_Win_x86... [ OK ][ OK ]
+2022.01.03 - 13:41:20.914 [ INFO ] - < Install-Soft > : Install Base... [ OK ][ OK ]
+2022.01.03 - 13:41:33.150 [ DEBUG LVL 2 ] - < install_master.ps1 > : Version=1697;
+2022.01.03 - 13:41:33.150 [ INFO ] - < Install-Soft > : Install Release.1697... [ OK ][ OK ]
+2022.01.03 - 13:41:35.244 [ INFO ] - < Install-Soft > : Install Sound... 2022.01.03 - 13:41:38.135 [ DEBUG LVL 2 ] - < install_master.ps1 > : FLAG_HOTR=False;
+2022.01.03 - 13:41:42.650 [ DEBUG LVL 2 ] - < install_vg.ps1 > : pVG=c:\Program Files (x86)\peleng\vgrabber;
+2022.01.03 - 13:41:43.978 [ DEBUG LVL 2 ] - < install_vg.ps1 > : Version=2.50;
+2022.01.03 - 13:41:43.978 [ INFO ] - < Install-Soft > : Install VGrabber_screen_2.50... [ OK ][ OK ]
+2022.01.03 - 13:41:44.431 [ INFO ] - < Main > : Copy SupervisorServer lib... [ OK ]
+2022.01.03 - 13:41:44.494 [ INFO ] - < Main > : Copy SupervisorServer bin... [ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:44.572 [ INFO ] - < Main > : Copy PS Modules... [ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:44.635 [ DEBUG LVL 2 ] - < Main > : MASTER Path: c:\Program Files (x86)\peleng\master\MASTER.exe;
+2022.01.03 - 13:41:44.635 [ DEBUG LVL 2 ] - < Main > : Active_Group: MASTER;
+2022.01.03 - 13:41:44.650 [ DEBUG LVL 2 ] - < Main > : VGrabber Path: c:\Program Files (x86)\peleng\vgrabber\vgrabber.exe;
+2022.01.03 - 13:41:44.650 [ DEBUG LVL 2 ] - < Main > : DBSync Path: DbSync.exe;
+2022.01.03 - 13:41:44.666 [ INFO ] - < Main > : Power Setup... [ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:45.56 [ INFO ] - < Main > : Setting timeout OS to 3 sec... [ OK ]
+2022.01.03 - 13:41:47.581 [ INFO ] - < Main > : Time synchronization... [ DONE ]
+2022.01.03 - 13:41:47.616 [ INFO ] - < Main > : Disable autorun... [ DONE ]
+2022.01.03 - 13:41:47.650 [ INFO ] - < Main > : Services stop... [ OK ][ OK ]
+2022.01.03 - 13:41:48.46 [ INFO ] - < Main > : Services start... [ OK ]
+2022.01.03 - 13:41:48.389 [ INFO ] - < Set-Rules > : Configuring Windows Firewall rules for ports: 123... [ OK ][ OK ][ OK ][ OK ]
+2022.01.03 - 13:41:50.486 [ INFO ] - < Main > : Setting LAN and RDP... [ DONE ]
+2022.01.03 - 13:41:50.692 [ INFO ] - < Main > : Sound off... [ DONE ]
+2022.01.03 - 13:41:50.710 [ INFO ] - < Main > : Disable auto reboot at crash... [ DONE ]
+2022.01.03 - 13:41:50.727 [ INFO ] - < Main > : UTC setting... [ OK ]
+2022.01.03 - 13:41:50.761 [ INFO ] - < Main > : Icons on Desktop... [ DONE ]
+2022.01.03 - 13:41:50.778 [ INFO ] - < Main > : Icons in Taskbar and StartMenu... [ DONE ]
+2022.01.03 - 13:41:50.796 [ INFO ] - < Main > : Layout... [ DONE ]
+2022.01.03 - 13:41:50.847 [ INFO ] - < Main > : EnableAutoTray... [ DONE ]
+2022.01.03 - 13:41:50.881 [ INFO ] - < Main > : OFF Visual effects... [ DONE ]
+2022.01.03 - 13:41:50.899 [ INFO ] - < Main > : ScheduledDefrag off... [ OK ]
+2022.01.03 - 13:41:51.19 [ INFO ] - < Main > : MP Scheduled Scan off... [ OK ]
+2022.01.03 - 13:41:51.88 [ INFO ] - < Main > : Uninstall: InboxGames, MediaCenter, OpticalMediaDisc, WindowsGadgetPlatform, TabletPCOC... [ . ][ . ][ . ][ . ][ . ][ DONE ]
+2022.01.03 - 13:41:51.277 [ INFO ] - < Main > : Run control panel to disable Security center messages
+2022.01.03 - 13:41:51.311 [ INFO ] - < Main > : Run Group politics to disable access to mass storage devices
+2022.01.03 - 13:41:51.466 [ WARNING ] - < Main > : file setup.log not found!
+2022.01.03 - 13:42:06.756 [ INFO ] - < Main > : =============================================================================
+2022.01.03 - 13:42:06.784 [ INFO ] - < Main > : =                             SESSION FINISHED                              =
+2022.01.03 - 13:42:06.798 [ INFO ] - < Main > : =============================================================================

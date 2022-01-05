@@ -1,0 +1,37 @@
+{
+  "IMF": 0,
+  "SMART": 1,
+  "MASTER": 2,
+  "RTS": 3,
+  "TACHYON": 4,
+  "IS": 5,
+  "PS": 6,
+  "TRS": 7,
+  "DEVICE": [
+    "IMF",
+    "SMART",
+    "MASTER",
+    "RTS",
+    "TACHYON",
+    "SERVER",
+    "AVIA",
+    "TRS"
+  ],
+  "DEV_SMART": [
+    "Recorder",
+    "Recorder",
+    "Recorder",
+    "Recorder",
+    "Player3",
+    "Player3",
+    "Player3",
+    "Player3",
+    "VGrabber"
+  ],
+  "USER_PELENG": "User",
+  "PATH_PELENG": "c:\\Program Files (x86)\\peleng\\master",
+  "TMP": "C:\\Tmp",
+  "pRUN": "C:\\ProgramData\\Peleng\\run",
+  "pLOG": "C:\\ProgramData\\Peleng\\logfiles",
+  "rsyncCFG": "/cygdrive/C/Windows"
+}

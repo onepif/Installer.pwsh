@@ -1,0 +1,108 @@
+{
+	"debug": 2,
+	"pwsh_version": "7.2.1",
+	"file_log": "C:\\ProgramData\\Peleng\\logfiles\\install.log",
+	"uname": "User",
+	"password": "1",
+	"subnet": "192.168",
+	"stepnet": 10,
+	"time_servers_ip": 2,
+	"npp_version": "8.1.9.3",
+	"sumatra_version": "3.1.2",
+
+	"IMF": {
+		"path_to_install": "C:\\Program Files\\Peleng",
+		"ip_base": 99,
+		"run_as_desktop": "yes",
+		"version": ""
+	},
+
+	"SMART": {
+		"RECORDER": {
+			"path_to_install": "D:\\ARMZ",
+			"path_to_gnrl": "D:\\Signals",
+			"path_to_arch": "E:\\Signals",
+			"run_as_desktop": "no",
+			"version": "4.8.3.21"
+		},
+		"PLAYER3": {
+			"path_to_install": "C:\\Program Files\\Peleng\\Player3",
+			"run_as_desktop": "yes",
+			"version": "3.3.49"
+		},
+		"VGRABBER": {
+			"run_as_desktop": "yes",
+			"path_to_install": "C:\\Program Files\\Peleng\\VGrabber",
+			"ip_bri": "131 132",
+			"version": "2.50"
+		},
+		"ip_base": 130
+	},
+
+	"MASTER": {
+		"path_to_install": "C:\\Program Files\\Peleng\\Master",
+		"ip_base": 170,
+		"run_as_desktop": "yes",
+		"version": "1697",
+		
+		"Comment for sound": "1 - Notify, 2 - Ivona, 3 - Valera",
+		"sound": "2",
+		"hot_reserv": "false",
+		"install_vg": "true",
+
+		"sectors": "ACC_W ACC_E TMA ACC_NUC ACC_NAM",
+		"rw": "RW08L RW26L RW08R RW26R"
+	},
+
+	"DBSYNC": {
+		"path_to_install": "C:\\Windows",
+		"version": "0.0.1"
+	},
+
+	"RTS": {
+		"path_to_install": "D:\\RTS",
+		"ip_base": 190,
+		"run_as_desktop": "no",
+		"version": "2018.12.14"
+	},
+
+	"TACHYON": {
+		"path_to_install": "C:\\Program Files\\Peleng\\Tachyon",
+		"ip_base": 10,
+		"run_as_desktop": "yes",
+		"version": "2.3",
+		"version_snd": "2.2"
+	},
+
+	"SERVER": {
+		"path_to_install": "D:\\Server",
+		"ip_base": 0,
+		"run_as_desktop": "yes",
+		"version": ""
+	},
+
+	"AVIA": {
+		"path_to_install": "D:\\AVIA",
+		"ip_base": 10,
+		"run_as_desktop": "yes",
+		"version": ""
+	},
+
+	"TRS": {
+		"path_to_install": "C:\\Program Files\\Peleng\\TRS",
+		"ip_base": 200,
+		"run_as_desktop": "yes",
+		"version": ""
+	},
+
+	"Comment about base IP": {
+		"IS" :		"1,2							(ip_base=0)",
+		"Tachyon":	"10,11,12						(ip_base=10)",
+		"PS":		"15,16							(ip_base=10)",
+		"A/V":		"101,102,111..., 121...			(ip_base=100)",
+		"SMAR-T":	"- 131,132,133[134], 141...159	(ip_base=130)",
+		"Master":	"171,172,173					(ip_base=170)",
+		"RTS":		"191							(ip_base=190)",
+		"TDK":		"201..., 211..., 221...			(ip_base=200)"
+	}
+}

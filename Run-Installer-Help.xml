@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Run-Installer.ps1</command:name>
+      <command:verb>Run</command:verb>
+      <command:noun>Installer</command:noun>
+      <maml:description>
+        <maml:para>Скрипт настройки предустанвленной OS Windows 7[10] и инсталяции СПО ЗАО "ПЕЛЕНГ".</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Скрипт выполняется в интерактивном и &lt;тихом&gt; (без запросов) режимах. В &lt;тихом&gt; режиме используются настройки из файла конфигурации в формате JSON.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Run-Installer.ps1</maml:name>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="d">
+          <maml:name>Dbg</maml:name>
+          <command:parameterValue required="False" variableLength="False">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="f">
+          <maml:name>FileConfig</maml:name>
+          <command:parameterValue required="False" variableLength="False">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="o">
+          <maml:name>FileLog</maml:name>
+          <command:parameterValue required="False" variableLength="False">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="i">
+          <maml:name>ID</maml:name>
+          <command:parameterValue required="False" variableLength="False">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="b">
+          <maml:name>BLOCK</maml:name>
+          <command:parameterValue required="False" variableLength="False">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="None">
+          <maml:name>GUI</maml:name>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="None">
+          <maml:name>Force</maml:name>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="d">
+        <maml:name>Dbg</maml:name>
+        <maml:Description>
+          <maml:para>Вывод информации дополняется отладочными сообщениями с указанной глубиной</maml:para>
+        </maml:Description>
+        <command:parameterValue required="True" variableLength="False">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>0</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="f">
+        <maml:name>FileConfig</maml:name>
+        <maml:Description>
+          <maml:para>Принимает значение пути и имени конфигурационного файла установки, если не задан - используется файл Run-Installer.json</maml:para>
+        </maml:Description>
+        <command:parameterValue required="True" variableLength="False">String</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="o">
+        <maml:name>FileLog</maml:name>
+        <maml:Description>
+          <maml:para>Принимает значение пути и имени LOG файла</maml:para>
+        </maml:Description>
+        <command:parameterValue required="True" variableLength="False">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="i">
+        <maml:name>ID</maml:name>
+        <maml:Description>
+          <maml:para>Принимает значение номера изделия:</maml:para>
+        </maml:Description>
+        <command:parameterValue required="True" variableLength="False">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+		<dev:possiblevalues>
+		  <dev:possiblevalue>
+		    <dev:value>1 - СМАР-Т&#10;2 - Мастер&#10;3 - АСК&#10;4 - Тахион&#10;5 - Информационный сервер&#10;6 - Плановый сервер&#10;7 - ТДК [Блок Связи]</dev:value>
+		  </dev:possiblevalue>
+		</dev:possiblevalues>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="b">
+        <maml:name>BLOCK</maml:name>
+        <maml:Description>
+          <maml:para>Принимает значение номера блока</maml:para>
+        </maml:Description>
+        <command:parameterValue required="True" variableLength="False">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="None">
+        <maml:name>GUI</maml:name>
+        <maml:Description>
+          <maml:para>Переключатель, указывает скрипту включить графический режим работы</maml:para>
+        </maml:Description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="False" variableLength="True" globbing="False" pipelineInput="False" position="Named" aliases="None">
+        <maml:name>Force</maml:name>
+        <maml:Description>
+          <maml:para>Переключатель, указывает скрипту включить &lt;тихий&gt; режим работы</maml:para>
+        </maml:Description>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Int32&#10;System.String[]</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Возвращается настроенная OS :)</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>Copyright (C) 2020 Dmitriy L. Ivanov aka onepif CJSC PELENG 2020</maml:para>
+        <maml:para>This program is free software; you can redistribute it and/or modify&#10;it under the terms of the GNU General Public License as published by&#10;the Free Software Foundation; either version 2 of the License, or&#10;(at your option) any later version.</maml:para>
+		<maml:para>This program is distributed in the hope that it will be useful,&#10;but WITHOUT ANY WARRANTY; without even the implied warranty of&#10;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#10;GNU General Public License for more details.</maml:para>
+		<maml:para>You should have received a copy of the GNU General Public License&#10;along with this program; if not, write to the Free Software&#10;Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; .\Run-Installer.ps1 -i 2 -b 1 -Force</dev:code>
+        <dev:remarks>
+          <maml:para>будет выполнена предварительная конфигурация OS Windows и &lt;тихая&gt; установка&#10;СПО &lt;Мастер&gt; на ПК с назначением ему имени &lt;BOI-1&gt;</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; .\Run-Installer.ps1 -i 5 -b 2 -Verbose</dev:code>
+        <dev:remarks>
+          <maml:para>будет выполнена предварительная конфигурация OS Windows и интерактивная установка&#10;СПО &lt;Информационный сервер&gt; на ПК с назначением ему имени &lt;BOI-2&gt; и выводм в&#10;консоль информацилнных сообщений</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Как создать файл справки командлета: </maml:linkText>
+		<maml:uri>https://docs.microsoft.com/ru-ru/powershell/scripting/developer/help/how-to-create-the-cmdlet-help-file?view=powershell-7</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Как отключить обновления Windows 10: </maml:linkText>
+		<maml:uri>https://remontka.pro/disable-updates-windows-10/</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>
