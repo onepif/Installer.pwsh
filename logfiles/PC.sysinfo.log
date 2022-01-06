@@ -9,12 +9,12 @@ Registered Owner:          User
 Registered Organization:   
 Product ID:                00371-177-0000061-85043
 Original Install Date:     25.12.2021, 15:05:23
-System Boot Time:          04.01.2022, 21:59:28
+System Boot Time:          06.01.2022, 21:18:02
 System Manufacturer:       innotek GmbH
 System Model:              VirtualBox
 System Type:               x64-based PC
 Processor(s):              1 Processor(s) Installed.
-                           [01]: Intel64 Family 6 Model 126 Stepping 5 GenuineIntel ~1191 Mhz
+                           [01]: Intel64 Family 6 Model 126 Stepping 5 GenuineIntel ~1190 Mhz
 BIOS Version:              innotek GmbH VirtualBox, 01.12.2006
 Windows Directory:         C:\Windows
 System Directory:          C:\Windows\system32
@@ -23,10 +23,10 @@ System Locale:             ru;Russian
 Input Locale:              ru;Russian
 Time Zone:                 (UTC) Coordinated Universal Time
 Total Physical Memory:     3 072 MB
-Available Physical Memory: 1 784 MB
+Available Physical Memory: 1 806 MB
 Virtual Memory: Max Size:  6 141 MB
-Virtual Memory: Available: 4 965 MB
-Virtual Memory: In Use:    1 176 MB
+Virtual Memory: Available: 4 928 MB
+Virtual Memory: In Use:    1 213 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    WORKGROUP
 Logon Server:              \\PC
@@ -250,5 +250,5 @@ Network Card(s):           1 NIC(s) Installed.
                                  Connection Name: LAN1
                                  DHCP Enabled:    No
                                  IP address(es)
-                                 [01]: 192.168.10.172
+                                 [01]: 192.168.10.171
                                  [02]: fe80::c810:9aaf:6b4c:6b3c

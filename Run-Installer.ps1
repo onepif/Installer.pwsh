@@ -528,15 +528,10 @@ Function Main(){
 #	Remove-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\ASUS' -Force *>$null
 
 	if( $ID -eq $Data.MASTER ){
-		$pid_setup = (Get-Process -Name Setup.exe).Id 2>$null
-		if( $pid_setup ){
-			Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Please wait, installation of OracleXE database"
-			Wait-Process -Timeout 1800 -Id $pid_setup *>$null
-		}
-
-		Write-Mill "Waiting for completion of installation of Oracle DB" "Setup.exe"
-#		if( Test-Path -Path "$($Data.TMP)\DISK1\setup.log" ){
-#			$Result = (Get-Content "$($Data.TMP)\DISK1\setup.log")[1].Split("=")[1]
+		Write-Mill "Waiting for completion of installation of OracleXE database" "msiexec.exe" #"Setup.exe"
+		if( Get-Service |Where-Object {$_.Name -eq "OracleXETNSListener"} ){
+#		if( Test-Path -Path "$($Data.TMP)\DISK1\responce\setup.log" ){
+#			$Result = (Get-Content "$($Data.TMP)\DISK1\responce\setup.log")[1].Split("=")[1]
 #			Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "OracleXE database installation completion code: $Result " -cr
 #			if( $Result -eq 0 ){
 				Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Install Oracle XE database successful!" -cr
@@ -575,7 +570,7 @@ Function Main(){
 				}
 
 #			} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Install Oracle XE database unsuccessful!" -cr }
-#		} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "file setup.log not found!" -cr }
+		} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "not found OracleXETNSListener service" -cr }
 	}
 
 	if( $FileLog -and !$Force ){

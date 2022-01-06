@@ -31,9 +31,9 @@ if( !(Get-Service |Where-Object {$_.Name -eq "OracleXETNSListener"}) ){
 		Set-Content -Path "$($Data.TMP)\DISK1\response\OracleXE-install.iss" -Value ((Get-Content "$($Data.TMP)\DISK1\response\OracleXE-install.iss") -Replace "SYSPassword=.*", "SYSPassword=password")
 		Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Run install OracleXE Database in parallel process" -cr
 		Remove-Item -Path "$($Data.TMP)\DISK1\setup.log" *>$null
-#		Start-Process pwsh { mode con:cols=30 lines=2; "Install OracleXE database..."; & $($Data.TMP)\DISK1\setup.exe /S -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss" }
 		$app = $($Data.TMP).Replace("\", "\\") + "\\DISK1\\setup.exe"
-		& $app /S -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
+#		& $app /S -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
+		& $app -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
 	}
 } else {
 	Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "OracleXE database allready installed" -cr

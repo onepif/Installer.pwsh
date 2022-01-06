@@ -1,4 +1,5 @@
 $SOFT_ENV = "$(Split-Path -Path $(Split-Path -Path $MyInvocation.MyCommand.Path))\soft_environment"
+$BRANCH_RUN = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
 
 Function Write-Mill(){
 	[CmdletBinding()]
@@ -41,10 +42,9 @@ if( (Get-Host).Version.Major -eq 2 ){
 	Write-Mill "Install WMF-5.1" $Name
 
 # Add autorestart run.cmd
-#	$BRANCH_RUN = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
-#	$VALUE = "cmd.exe /u /c run.cmd"
-#	Set-ItemProperty -Path $BRANCH_RUN -Name "rerun" -Value $VALUE
-#	Remove-ItemProperty -Path $BRANCH_RUN -Name "SS" *>$null
+	$VALUE = "cmd.exe /u /c powershell.exe Start-Process $(Split-Path -Path $MyInvocation.MyCommand.Path)\bin\run.cmd -Verb RunAs"
+	if( $Args ){ $VALUE += " -ArgumentList @Args" }
+	Set-ItemProperty -Path $BRANCH_RUN -Name "run" -Value $VALUE
 
 	"press 'E/Q' to exit or 'R' to restart immediately "
 	for ($ix = 30; $ix -ge 0; $ix-- ){
@@ -52,6 +52,7 @@ if( (Get-Host).Version.Major -eq 2 ){
 		choice.exe /c neqr /n /d n /t 1 >$null
 		if( $LASTEXITCODE -ne 1 ) { if( $LASTEXITCODE -eq 4 ) { Restart-Computer } else { return 0 } }
 	}
-
 	Restart-Computer
+} else {
+	Remove-ItemProperty -Path $BRANCH_RUN -Name "run" *>$null
 }
