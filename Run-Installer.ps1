@@ -528,7 +528,7 @@ Function Main(){
 #	Remove-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\ASUS' -Force *>$null
 
 	if( $ID -eq $Data.MASTER ){
-		Write-Mill "Waiting for completion of installation of OracleXE database" "msiexec.exe" #"Setup.exe"
+		Write-Mill "Waiting for completion of installation of OracleXE database" "setup" #"Setup.exe"
 		if( Get-Service |Where-Object {$_.Name -eq "OracleXETNSListener"} ){
 #		if( Test-Path -Path "$($Data.TMP)\DISK1\responce\setup.log" ){
 #			$Result = (Get-Content "$($Data.TMP)\DISK1\responce\setup.log")[1].Split("=")[1]
@@ -568,7 +568,6 @@ Function Main(){
 					CMD_ErrCr
 					Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Unpacking error" -cr
 				}
-
 #			} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t e -m "Install Oracle XE database unsuccessful!" -cr }
 		} else { Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "not found OracleXETNSListener service" -cr }
 	}

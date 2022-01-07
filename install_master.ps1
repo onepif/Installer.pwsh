@@ -32,8 +32,8 @@ if( !(Get-Service |Where-Object {$_.Name -eq "OracleXETNSListener"}) ){
 		Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -m "Run install OracleXE Database in parallel process" -cr
 		Remove-Item -Path "$($Data.TMP)\DISK1\setup.log" *>$null
 		$app = $($Data.TMP).Replace("\", "\\") + "\\DISK1\\setup.exe"
-#		& $app /S -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
-		& $app -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
+		& $app /S -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
+#		& $app -f1"$($Data.TMP)\DISK1\response\OracleXE-install.iss"
 	}
 } else {
 	Out-Logging -out $FileLog -src $MyInvocation.MyCommand.Name -t w -m "OracleXE database allready installed" -cr

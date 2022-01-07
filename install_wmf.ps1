@@ -34,6 +34,12 @@ if( (Get-Host).Version.Major -eq 2 ){
 	}
 	Write-Mill "Install WMF-4.0" $Name
 
+# сдинем вывод на 10 строк вниз
+	Add-Type -AssemblyName System.Windows.Forms
+	$current = [System.Windows.Forms.Cursor]::Position
+	$current.Y += 10
+	[System.Windows.Forms.Cursor]::Position = $current
+
 # ===== Install WMF-5.1 =====
 #	Expand-Archive	-LiteralPath $SOFT_ENV\sys\pwsh\Win7AndW2K8R2-KB3191566-x64.zip \
 #					-Destination $SOFT_ENV\sys\pwsh\ -Force
